@@ -9,9 +9,7 @@
     <!-- Classes -->
     <bean id="classes" class="com.wzw.entity.Classes">
         <property name="id" value="1"/>
-        <property name="name">
-            <value><![CDATA[<⼀班>]]</value>
-        </property>
+        <property name="name" value="2" />
     </bean>
     <!-- Student -->
     <bean id="student" class="com.wzw.entity.Student">
