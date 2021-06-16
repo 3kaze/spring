@@ -14,7 +14,8 @@ public class Test {
         //    System.out.println(student);
 
         // b. Ioc容器自动创建对象，开发者只需取出对象
-        ApplicationContext applicationContext = new ClassPathXmlApplicationContext("spring.xml");
+        ApplicationContext applicationContext =
+                new ClassPathXmlApplicationContext("spring.xml");
         // b.1 通过id取值
         Student student = (Student) applicationContext.getBean("student3");
         // b.2 通过类型取值（存在两个或以上Student Bean时会跑异常）

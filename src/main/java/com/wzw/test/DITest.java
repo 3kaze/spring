@@ -8,9 +8,10 @@ import org.springframework.context.support.ClassPathXmlApplicationContext;
 /**
  * @author wei
  */
-public class Test2 {
+public class DITest {
     public static void main(String[] args) {
-        ApplicationContext applicationContext = new ClassPathXmlApplicationContext("spring-di.xml");
+        ApplicationContext applicationContext =
+                new ClassPathXmlApplicationContext("spring-di.xml");
         //    String[] names = applicationContext.getBeanDefinitionNames();
         //    for (String name : names) {
         //      System.out.println(name);

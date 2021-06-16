@@ -6,7 +6,15 @@
        xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd
        http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context.xsd
 ">
+    <!-- 静态工厂 -->
+    <bean id="car1" class="com.wzw.factory.StaticCarFactory" factory-method="getCar">
+        <constructor-arg value="1"/>
+    </bean>
+    <!-- 实例工厂 -->
+    <bean id="instanceCarFactory" class="com.wzw.factory.InstanceCarFactory" />
+    <!-- 通过实例工厂获取Car -->
+    <bean id="car2" factory-bean="instanceCarFactory" factory-method="getCar">
+        <constructor-arg value="2"/>
+    </bean>
 
-    <bean id="user" class="com.wzw.entity.User" />
-    <bean id="account" class="com.wzw.entity.Account" />
 </beans>

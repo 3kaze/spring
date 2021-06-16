@@ -6,7 +6,10 @@
        xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd
        http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context.xsd
 ">
+<!--    <bean id="repository" class="com.wzw.entity.Repository"/>-->
 
-    <bean id="user" class="com.wzw.entity.User" />
-    <bean id="account" class="com.wzw.entity.Account" />
+    <!-- 基于注解 -->
+    <!-- 1.配置自动扫包 -->
+    <!-- 2.添加注解 -->
+    <context:component-scan base-package="com.wzw" />
 </beans>
